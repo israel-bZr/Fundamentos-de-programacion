@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Atelier du Pain — Panadería Gourmet & Café</title>
+  <meta name="description" content="Panadería artesanal gourmet de fermentación lenta. Masa madre 48h, mantequilla francesa y repostería de autor estilo Apple minimalist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+
+  <!-- Top Announcement Bar (Apple Style) -->
+  <aside class="announcement-bar" role="complementary">
+    <div class="announcement-container">
+      <span class="badge-pill">Novedad</span>
+      <span>Horneada de Masa Madre fresca lista a las 8:00 AM y 4:00 PM. <strong>Envío sin costo</strong> en órdenes mayores a $350.</span>
+      <a href="#catalogo" class="announcement-link">Ver especialidades <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </aside>
+
+  <!-- Sticky Glassmorphism Header -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="#" class="nav-brand">
+        <span class="brand-symbol">✦</span>
+        <div class="brand-text">
+          <span class="brand-title">L'ATELIER</span>
+          <span class="brand-subtitle">DU PAIN • GOURMET</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#catalogo" class="nav-item">Panadería & Dulce</a>
+        <a href="#cafeteria" class="nav-item">Bar de Café</a>
+        <a href="#configurador" class="nav-item">Pastel a Medida</a>
+        <a href="#artesania" class="nav-item">Filosofía</a>
+        <a href="#resenas" class="nav-item">Experiencias</a>
+        <a href="#visitanos" class="nav-item">Boutique</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Live Status indicator -->
+        <div class="live-status" title="Horneando actualmente">
+          <span class="pulse-dot"></span>
+          <span class="status-label">Horneando hoy</span>
+        </div>
+
+        <button class="cart-trigger-btn" id="cartBtn" aria-label="Ver carrito">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section (Apple Pro Aesthetic) -->
+  <section class="hero-section">
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-icon">🌾</span>
+        <span>Fermentación Natural de 48 Horas • Harinas Molidas a la Piedra</span>
+      </div>
+      <h1 class="hero-title">
+        La perfección hecha pan.
+        <span class="gradient-text">Puro arte culinario.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Diseñado con la precisión de la alta gastronomía francesa. Corteza crujiente insuperable, miga alveolada y mantequilla de Normandía AOP.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#catalogo" class="btn-apple-primary">
+          <span>Explorar Catálogo</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#configurador" class="btn-apple-secondary">
+          <i class="fa-solid fa-cake-candles"></i>
+          <span>Personalizar Pastel</span>
+        </a>
+      </div>
+
+      <!-- Quick Highlights Bar -->
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <span class="metric-num">48h</span>
+          <span class="metric-txt">Fermentación lenta en frío</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-card">
+          <span class="metric-num">100%</span>
+          <span class="metric-txt">Masa madre viva & orgánico</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-card">
+          <span class="metric-num">0%</span>
+          <span class="metric-txt">Conservadores artificiales</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-card">
+          <span class="metric-num">4.9★</span>
+          <span class="metric-txt">+1,800 Clientes felices</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase (Floating Apple Device/Showcase Style) -->
+      <div class="hero-visual-card">
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=85" alt="Pan artesanal gourmet recién salido del horno" class="hero-image" loading="eager">
+          <div class="hero-floating-card top-left glass-panel">
+            <span class="tag-live">✦ Recién horneado</span>
+            <h4>Campagne Tradición</h4>
+            <p>Harina de centeno & trigo de montaña</p>
+          </div>
+          <div class="hero-floating-card bottom-right glass-panel">
+            <div class="star-rating">★★★★★</div>
+            <p class="quote">"El mejor pan de masa madre que he probado fuera de París."</p>
+            <span class="author">— Chef Valentina Rossi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Catalog Section -->
+  <section id="catalogo" class="catalog-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Colección de Temporada</span>
+        <h2 class="section-title">Nuestras Creaciones</h2>
+        <p class="section-desc">Selección curada elaborada diariamente en pequeños lotes con ingredientes de origen certificado.</p>
+      </div>
+
+      <!-- Filter Controls & Search -->
+      <div class="catalog-controls">
+        <div class="category-filters" id="categoryFilters">
+          <button class="filter-chip active" data-category="todos">
+            <span>Todos</span>
+          </button>
+          <button class="filter-chip" data-category="masa-madre">
+            <i class="fa-solid fa-wheat-awn"></i>
+            <span>Masa Madre</span>
+          </button>
+          <button class="filter-chip" data-category="viennoiserie">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <span>Viennoiserie</span>
+          </button>
+          <button class="filter-chip" data-category="reposteria">
+            <i class="fa-solid fa-cake-candles"></i>
+            <span>Alta Repostería</span>
+          </button>
+          <button class="filter-chip" data-category="cafe">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>Café & Maridaje</span>
+          </button>
+        </div>
+
+        <div class="catalog-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Buscar por sabor, ingrediente o pan..." aria-label="Buscar productos">
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SPECIALTY COFFEE & BEVERAGE MENU (APPLE DESIGN SYSTEM)
+       ============================================================ -->
+  <section id="cafeteria" class="coffee-menu-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Bar de Especialidad & Bebidas de Autor</span>
+        <h2 class="section-title">El Menú de Cafetería</h2>
+        <p class="section-desc">Granos de origen único evaluados con más de 86 puntos SCA. Tostados artesanalmente cada semana y calibrados con precisión para armonizar cada bocado.</p>
+      </div>
+
+      <!-- Specialty Coffee Specs Bar (Apple Keynote Style) -->
+      <div class="coffee-highlights-bar">
+        <div class="coffee-highlight-item">
+          <i class="fa-solid fa-mountain-sun"></i>
+          <div>
+            <strong>Microlotes de Altura</strong>
+            <span>Chiapas, Oaxaca & Veracruz (1,500+ msnm)</span>
+          </div>
+        </div>
+        <div class="coffee-highlight-item">
+          <i class="fa-solid fa-droplet"></i>
+          <div>
+            <strong>Extracción La Marzocco</strong>
+            <span>Control de temperatura a 93°C y 9 bares</span>
+          </div>
+        </div>
+        <div class="coffee-highlight-item">
+          <i class="fa-solid fa-cow"></i>
+          <div>
+            <strong>Leches Seleccionadas</strong>
+            <span>Libre pastoreo o Avena Barista / Almendras</span>
+          </div>
+        </div>
+        <div class="coffee-highlight-item">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <strong>Tostado Artesanal</strong>
+            <span>Notas dulces, florales y acidez balanceada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coffee Category Filter Chips -->
+      <div class="coffee-category-nav" id="coffeeCategoryNav">
+        <button class="coffee-tab active" data-coffee-cat="todos">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Todo el Menú</span>
+        </button>
+        <button class="coffee-tab" data-coffee-cat="espresso">
+          <i class="fa-solid fa-mug-saucer"></i>
+          <span>Espresso Bar</span>
+        </button>
+        <button class="coffee-tab" data-coffee-cat="filtrados">
+          <i class="fa-solid fa-filter"></i>
+          <span>Slow Bar (Filtrados)</span>
+        </button>
+        <button class="coffee-tab" data-coffee-cat="cold">
+          <i class="fa-solid fa-snowflake"></i>
+          <span>Cold Coffee & Iced</span>
+        </button>
+        <button class="coffee-tab" data-coffee-cat="sin-cafe">
+          <i class="fa-solid fa-leaf"></i>
+          <span>Matcha, Chai & Tisanas</span>
+        </button>
+      </div>
+
+      <!-- Coffee Items Grid -->
+      <div class="coffee-grid" id="coffeeGrid">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Custom Cake Configurator (Apple Studio Configurator Style) -->
+  <section id="configurador" class="configurator-section">
+    <div class="section-container">
+      <div class="configurator-card glass-panel-heavy">
+        <div class="configurator-intro">
+          <span class="section-tag">Bespoke Atelier</span>
+          <h2 class="section-title">Diseña tu Pastel de Alta Gama</h2>
+          <p class="section-desc">Configura en segundos una pieza exclusiva para aniversarios, bodas o eventos memorables. Calculamos el presupuesto en tiempo real y enviamos tu solicitud directa a nuestro maestro pastelero.</p>
+        </div>
+
+        <div class="configurator-grid">
+          <!-- Live Preview Visual -->
+          <div class="configurator-preview">
+            <div class="cake-visual-box">
+              <div class="cake-tier-display" id="cakeTierDisplay">
+                <div class="cake-tier tier-top" id="tierTop">
+                  <span class="tier-label" id="tierTopLabel">Topping de Autor</span>
+                </div>
+                <div class="cake-tier tier-mid" id="tierMid">
+                  <span class="tier-label" id="tierMidLabel">Relleno Seleccionado</span>
+                </div>
+                <div class="cake-tier tier-base" id="tierBase">
+                  <span class="tier-label" id="tierBaseLabel">Bizcocho Base</span>
+                </div>
+              </div>
+              <div class="cake-live-summary">
+                <span class="summary-tag">Presupuesto Estimado</span>
+                <span class="summary-price" id="cakeTotalPrice">$720 MXN</span>
+                <span class="summary-servings" id="cakeServings">Para 12 a 15 personas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Configuration Controls -->
+          <div class="configurator-options">
+            <div class="config-step">
+              <label class="step-label">
+                <span class="step-number">1</span>
+                <span>Tamaño & Porciones</span>
+              </label>
+              <div class="option-pills" id="sizeOptions">
+                <button class="pill-btn active" data-size="12" data-price="550" data-label="Boutique (12-15 personas)">
+                  <strong>12-15 pax</strong>
+                  <span>$550 MXN</span>
+                </button>
+                <button class="pill-btn" data-size="25" data-price="890" data-label="Celebration (20-25 personas)">
+                  <strong>20-25 pax</strong>
+                  <span>$890 MXN</span>
+                </button>
+                <button class="pill-btn" data-size="45" data-price="1450" data-label="Grand Gala (40-45 personas)">
+                  <strong>40-45 pax</strong>
+                  <span>$1,450 MXN</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="config-step">
+              <label class="step-label">
+                <span class="step-number">2</span>
+                <span>Bizcocho Artesanal</span>
+              </label>
+              <div class="option-pills" id="spongeOptions">
+                <button class="pill-btn active" data-sponge="Vainilla de Papantla Orgánica" data-price="0">
+                  <strong>Vainilla Bourbon</strong>
+                  <span>Infusionada 24h</span>
+                </button>
+                <button class="pill-btn" data-sponge="Chocolate Belga 70%" data-price="80">
+                  <strong>Cacao 70%</strong>
+                  <span>+$80 MXN</span>
+                </button>
+                <button class="pill-btn" data-sponge="Red Velvet de Frambuesa Fresca" data-price="90">
+                  <strong>Red Velvet Real</strong>
+                  <span>+$90 MXN</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="config-step">
+              <label class="step-label">
+                <span class="step-number">3</span>
+                <span>Relleno Gourmet</span>
+              </label>
+              <div class="option-pills" id="fillingOptions">
+                <button class="pill-btn active" data-filling="Ganache de Pistacho de Bronte & Maracuyá" data-price="90">
+                  <strong>Pistacho & Maracuyá</strong>
+                  <span>+$90 MXN</span>
+                </button>
+                <button class="pill-btn" data-filling="Praliné Avellana del Piamonte" data-price="110">
+                  <strong>Praliné Avellana</strong>
+                  <span>+$110 MXN</span>
+                </button>
+                <button class="pill-btn" data-filling="Compota de Frutos Rojos Silvestres & Mascarpone" data-price="80">
+                  <strong>Frutos Silvestres</strong>
+                  <span>+$80 MXN</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="config-step">
+              <label class="step-label">
+                <span class="step-number">4</span>
+                <span>Acabado Exterior</span>
+              </label>
+              <div class="option-pills" id="finishOptions">
+                <button class="pill-btn active" data-finish="Minimalista Seda con Pétalos Comestibles" data-price="0">
+                  <strong>Seda Minimalista</strong>
+                  <span>Pétalos & Pan de oro</span>
+                </button>
+                <button class="pill-btn" data-finish="Naked Cake Rústico con Bayas Glaseadas" data-price="40">
+                  <strong>Rústico Natural</strong>
+                  <span>+$40 MXN</span>
+                </button>
+                <button class="pill-btn" data-finish="Efecto Terciopelo Esculpido" data-price="120">
+                  <strong>Terciopelo Esculpido</strong>
+                  <span>+$120 MXN</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="config-step">
+              <label for="dedicationText" class="step-label">
+                <span class="step-number">5</span>
+                <span>Mensaje Personalizado o Dedicatoria (Opcional)</span>
+              </label>
+              <input type="text" id="dedicationText" class="apple-input" placeholder="Ej: 'Feliz Aniversario Amor' o 'Bienvenido Nicolás'">
+            </div>
+
+            <div class="config-actions">
+              <button class="btn-apple-primary full-width" id="orderCustomCakeBtn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Cotizar y Reservar por WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy & Craftsmanship Section (Apple Storytelling) -->
+  <section id="artesania" class="craft-section">
+    <div class="section-container">
+      <div class="craft-header text-center">
+        <span class="section-tag">Nuestra Obsesión</span>
+        <h2 class="section-title">El Respeto por los Procesos</h2>
+        <p class="section-desc">En un mundo acelerado, decidimos tomarnos 48 horas para hornear cada hogaza.</p>
+      </div>
+
+      <div class="craft-grid">
+        <div class="craft-card glass-panel">
+          <div class="craft-icon">⚗️</div>
+          <h3>Masa Madre Centenaria</h3>
+          <p>Alimentada diariamente con harinas orgánicas puras. El cultivo bacteriano desarrolla notas lácticas sutiles, corteza acaramelada y una digestibilidad insuperable.</p>
+        </div>
+
+        <div class="craft-card glass-panel">
+          <div class="craft-icon">🧈</div>
+          <h3>Mantequilla AOP Normandía</h3>
+          <p>84% de materia grasa pura. Permite un hojaldrado de 27 capas milimétricas que se desmorona en boca con un aroma inconfundible a avellana tostada.</p>
+        </div>
+
+        <div class="craft-card glass-panel">
+          <div class="craft-icon">🔥</div>
+          <h3>Horno de Suela de Piedra</h3>
+          <p>Inyección de vapor a 250°C. La caramelización exterior bloquea la humedad interior, logrando una corteza crujiente que canta al salir del horno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Social Proof / Reviews -->
+  <section id="resenas" class="reviews-section">
+    <div class="section-container">
+      <div class="reviews-header text-center">
+        <span class="section-tag">Testimonios Reales</span>
+        <h2 class="section-title">Lo que dicen los amantes del buen pan</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card glass-panel">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"El croissant tiene la textura exacta de los mejores salones de té en París. Crujiente por fuera, nido de abeja perfecto por dentro. Incomparable."</p>
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Lucía Méndez" class="reviewer-avatar">
+            <div>
+              <strong>Lucía Méndez</strong>
+              <span>Sommelier & Crítica Gastronómica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card glass-panel featured-review">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Encargué el pastel de bodas personalizado aquí y fue el centro de atención. El equilibrio entre el bizcocho de vainilla bourbon y el praliné de avellana fue sublime."</p>
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Carlos De La Vega" class="reviewer-avatar">
+            <div>
+              <strong>Carlos De La Vega</strong>
+              <span>Cliente Frecuente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card glass-panel">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"La hogaza de masa madre dura fresca 5 días intacta. Saber que no tiene levadura comercial ni aditivos químicos hace que valga cada centavo."</p>
+          <div class="reviewer-meta">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Sofía Arismendi" class="reviewer-avatar">
+            <div>
+              <strong>Dra. Sofía Arismendi</strong>
+              <span>Nutricionista Culinaria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Hours Section -->
+  <section id="visitanos" class="visit-section">
+    <div class="section-container">
+      <div class="visit-card glass-panel-heavy">
+        <div class="visit-info">
+          <span class="section-tag">Nuestra Boutique</span>
+          <h2 class="section-title">Ven a disfrutar del aroma a pan caliente</h2>
+          <p class="visit-lead">Un espacio minimalista bañado de luz natural, donde el sonido del corte de la hogaza y el espresso recién molido crean el ritual perfecto.</p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Dirección</strong>
+                <p>Av. Paseo de las Flores 1420, Colonia Providencia</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong>Horario de Atención</strong>
+                <p>Martes a Domingo: 7:30 AM – 8:30 PM (Lunes cerrado)</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <strong>Pedidos Telefónicos & WhatsApp</strong>
+                <p>+52 33 1234 5678</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="visit-cta">
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-apple-secondary">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>Cómo Llegar en GPS</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="visit-visual">
+          <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1000&q=80" alt="Interior de la panadería gourmet L'Atelier" class="visit-img">
+          <div class="experience-card glass-panel">
+            <div class="exp-icon">☕</div>
+            <div>
+              <strong>Barra de Café de Especialidad</strong>
+              <p>Granos de origen único con tostado medio para acompañar cada pieza.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apple-Style Minimal Footer -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-symbol">✦</span>
+          <h3>L'ATELIER DU PAIN</h3>
+          <p>Panadería de masa madre y repostería fina. Horneado con maestría y pasión sin atajos.</p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Especialidades</h4>
+          <a href="#catalogo">Hogaza Campagne</a>
+          <a href="#catalogo">Croissant de Mantequilla</a>
+          <a href="#catalogo">Pain au Chocolat</a>
+          <a href="#catalogo">Basque Cheesecake</a>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Experiencia</h4>
+          <a href="#artesania">Proceso de 48 horas</a>
+          <a href="#configurador">Pasteles a medida</a>
+          <a href="#resenas">Opiniones</a>
+          <a href="#visitanos">Boutique & Café</a>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>El Club del Horno</h4>
+          <p>Recibe notificaciones exclusivas de creaciones de edición limitada de fin de semana.</p>
+          <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('¡Bienvenido al Club del Horno! Pronto recibirás nuestras notas de cata.');">
+            <input type="email" placeholder="tu@correo.com" required class="apple-input-sm">
+            <button type="submit" class="btn-apple-primary-sm">Suscribirme</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 L'Atelier du Pain S.A. de C.V. Todos los derechos reservados. Diseñado con inspiración Apple & Estética Gourmet.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer (Apple Slide-Over Modal) -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Bolsa de compra">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Tu Bolsa de Compra</h3>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar bolsa">&times;</button>
+    </div>
+
+    <!-- Free shipping progressive bar -->
+    <div class="shipping-tracker" id="shippingTracker">
+      <div class="tracker-text" id="trackerText">Agrega $350 para Envío Gratis</div>
+      <div class="tracker-bar">
+        <div class="tracker-progress" id="trackerProgress" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Cart items container -->
+    <div class="cart-items" id="cartItemsList">
+      <!-- Empty cart or items injected by JS -->
+    </div>
+
+    <!-- Cart Checkout Footer -->
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span class="price-val" id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-line delivery-line">
+        <span>Método de entrega</span>
+        <div class="delivery-toggle">
+          <label class="delivery-radio">
+            <input type="radio" name="deliveryMethod" value="pickup" checked>
+            <span>Recoger en tienda</span>
+          </label>
+          <label class="delivery-radio">
+            <input type="radio" name="deliveryMethod" value="delivery">
+            <span>Envío a domicilio</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="delivery-address-box" id="addressBox" style="display: none;">
+        <input type="text" id="customerAddress" class="apple-input-sm" placeholder="Calle, número, colonia y referencias">
+      </div>
+
+      <div class="cart-summary-line total-line">
+        <strong>Total a Pagar</strong>
+        <strong class="total-val" id="cartTotal">$0.00</strong>
+      </div>
+
+      <div class="cart-actions">
+        <button class="btn-apple-primary full-width" id="checkoutWhatsappBtn">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Completar Pedido por WhatsApp</span>
+        </button>
+        <button class="btn-clear-cart" id="clearCartBtn">Vaciar bolsa</button>
+      </div>
+
+      <p class="cart-secure-notice">
+        <i class="fa-solid fa-lock"></i> Pedido directo y atención personalizada por nuestro equipo.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Product Detail Modal (Apple Quick Look) -->
+  <div class="modal-backdrop" id="productModalBackdrop"></div>
+  <div class="product-modal glass-panel-heavy" id="productModal" role="dialog" aria-modal="true">
+    <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar">&times;</button>
+    <div class="modal-content" id="modalContent">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+
+  <!-- Coffee Customization Modal (Apple Style) -->
+  <div class="modal-backdrop" id="coffeeModalBackdrop"></div>
+  <div class="coffee-modal glass-panel-heavy" id="coffeeModal" role="dialog" aria-modal="true">
+    <button class="modal-close-btn" id="coffeeModalCloseBtn" aria-label="Cerrar">&times;</button>
+    <div class="coffee-modal-content" id="coffeeModalContent">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
